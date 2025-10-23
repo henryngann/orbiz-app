@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "image": "https://placehold.co/200x120?text=Lucky+Sevens",
+    "provider": "Betsoft",
+    "title": "Lucky Sevens",
+    "category": "Slots"
+  },
+  {
+    "id": 2,
+    "image": "https://placehold.co/200x120?text=Blackjack+Classic",
+    "provider": "PragmaticPlay",
+    "title": "Blackjack Classic",
+    "category": "Table Games"
+  },
+  {
+    "id": 3,
+    "image": "https://placehold.co/200x120?text=Roulette+Royale",
+    "provider": "PragmaticPlay",
+    "title": "Roulette Royale",
+    "category": "Table Games"
+  },
+  {
+    "id": 4,
+    "image": "https://placehold.co/200x120?text=Treasure+Spin",
+    "provider": "Spribe",
+    "title": "Treasure Spin",
+    "category": "Slots"
+  },
+  {
+    "id": 5,
+    "image": "https://placehold.co/200x120?text=Baccarat+Pro",
+    "provider": "Betsoft",
+    "title": "Baccarat Pro",
+    "category": "Table Games"
+  },
+  {
+    "id": 6,
+    "image": "https://placehold.co/200x120?text=Mega+Jackpot",
+    "provider": "Evolution",
+    "title": "Mega Jackpot",
+    "category": "Jackpots"
+  },
+  {
+    "id": 7,
+    "image": "https://placehold.co/200x120?text=Poker+Night",
+    "provider": "Evolution",
+    "title": "Poker Night",
+    "category": "Card Games"
+  },
+  {
+    "id": 8,
+    "image": "https://placehold.co/200x120?text=Dragon's+Luck",
+    "provider": "Betsoft",
+    "title": "Dragon\u2019s Luck",
+    "category": "Slots"
+  },
+  {
+    "id": 9,
+    "image": "https://placehold.co/200x120?text=Golden+Fortune",
+    "provider": "Hacksaw",
+    "title": "Golden Fortune",
+    "category": "Slots"
+  },
+  {
+    "id": 10,
+    "image": "https://placehold.co/200x120?text=Wheel+of+Chance",
+    "provider": "PragmaticPlay",
+    "title": "Wheel of Chance",
+    "category": "Jackpots"
+  }
+]
