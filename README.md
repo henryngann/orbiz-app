@@ -113,6 +113,9 @@ Styling/ + Providers/
 
 ## Final Thoughts
 
+<img width="517" height="163" alt="image" src="https://github.com/user-attachments/assets/8b90e766-7667-4ce7-9459-4778faf80b67" />
+
+
 And thats a wrap folks! My goal was to ship a clear, responsive lobby that can be easily maintained/scaled up in the future. All functional and technical requirements are satisfied. Most of my time went into making the code blocks very readable keeping complexity to a minimum. In the future, I would love to have more time to polish the components and make the website feel more complete. If I had an extra hour, I would consider doing an accessibilty pass to knock down WCAG points or adding visual regressions in Chromatic. We could also use tools like WAVE and Lighthouse to hone in on more other optimizations like SEO, Performance, Best Practices , etc.
 
 Thank you for considering my work!! I appreciate the time spent, and I'm happy to elaborate on any of the decisions that I made. I also welcome any feedback and critique!
