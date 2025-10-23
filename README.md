@@ -1,7 +1,7 @@
 # Henry Ngan
 
-Timebox: Referring to the Job Description, the length of the exercise should take roughly ~ 1 hour.
-Deployment - [Vercel](https://orbiz-app-henryngan.vercel.app/) -
+- Timebox: Referring to the Job Description, the length of the exercise should take roughly ~ 1 hour.
+- Deployment - [Vercel](https://orbiz-app-henryngan.vercel.app/) -
 
 - See Future Considerations for closing thoughts on polish and future improvements.
 
@@ -78,7 +78,7 @@ Components/
 
 - CategoryBar for the implementation of toggling favourites. Works hand in hand with CategoryItem to display the MUI paper items. (Was able to knock down this bonus point. Simple onclick toggle)
 
-- Image Carousel for funsies. (This wasn't required but the design of the website felt empty. I just ripped some images off of bet105.ag and slapped them at the top.) Also, it is common practice to have promotions at the top! It is the highest attention zone for users and can get better click-through + conversion by adding it in that particular spot.
+- Image Carousel for funsies. (This wasn't required but the design of the website felt empty. I just ripped some images off of bet105.ag and slapped them at the top.) Fun fact! It is general common practice to have promotions at the top! It is the highest attention zone for users and can get better click-through + conversion by adding it in that particular spot.
 
 - GameCardSkeleton - Uses MUI's skeleton component to show a lightweight place holder. Very apparent with the simulated network delay. Just refresh to check it out!
 
@@ -113,7 +113,7 @@ Styling/ + Providers/
 
 ## Final Thoughts
 
-And thats a wrap folks! My goal was to ship a clear, responsive lobby that can be easily maintained/scaled up in the future. All functional and technical requirements are satisfied. Most of my time went into making the code blocks very readable keeping complexity to a minimum. In the future, I would love to have more time to polish the components and make the website feel more complete. If I had an extra hour, I would consider doing an accessibilty pass to knock down WCAG points or adding visual regressions in Chromatic. We could also use tools like WAVE and Lighthouse to hone in on more optional optimizations.
+And thats a wrap folks! My goal was to ship a clear, responsive lobby that can be easily maintained/scaled up in the future. All functional and technical requirements are satisfied. Most of my time went into making the code blocks very readable keeping complexity to a minimum. In the future, I would love to have more time to polish the components and make the website feel more complete. If I had an extra hour, I would consider doing an accessibilty pass to knock down WCAG points or adding visual regressions in Chromatic. We could also use tools like WAVE and Lighthouse to hone in on more other optimizations like SEO, Performance, Best Practices , etc.
 
 Thank you for considering my work!! I appreciate the time spent, and I'm happy to elaborate on any of the decisions that I made. I also welcome any feedback and critique!
 
