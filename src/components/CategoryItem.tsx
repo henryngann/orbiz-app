@@ -8,24 +8,31 @@ interface CategoryItemProps {
   onClick: () => void;
 }
 
-const boxStyle = (theme: Theme) => ({
-  bgcolor: theme.palette.background.paper,
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  gap: 1,
-  py: { xs: 1, sm: 1.5 },
-  px: 2,
-  minWidth: { xs: 96, sm: 110 },
-  transition: "transform 200ms ease, background-color 300ms ease",
-});
-
 const CategoryItem = ({
   icon: IconComponent,
   label,
   isActive,
   onClick,
 }: CategoryItemProps) => {
+  const boxStyle = (theme: Theme) => ({
+    bgcolor: theme.palette.background.paper,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    gap: 1,
+    py: { xs: 1, sm: 2 },
+    px: 2,
+    minWidth: { xs: 96, sm: 110 },
+    "&:hover": {
+      cursor: "pointer",
+      transform: "scale(1.10)",
+      bgcolor: isActive
+        ? theme.palette.primary.dark
+        : theme.palette.action.hover,
+    },
+    transition: "transform 200ms ease, background-color 300ms ease",
+  });
+
   return (
     <Paper
       onClick={onClick}
@@ -36,7 +43,7 @@ const CategoryItem = ({
           : theme.palette.background.paper,
       })}
     >
-      <Icon component={IconComponent} />
+      <Icon sx={{ fontSize: 32 }} component={IconComponent} />
       <Typography variant="caption">{label}</Typography>
     </Paper>
   );
