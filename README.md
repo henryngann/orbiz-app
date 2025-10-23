@@ -120,6 +120,9 @@ Thank you for considering my work!! I appreciate the time spent, and I'm happy t
 Lets talk soon!
 Henry.
 
+## Quick Lighthouse Report
+<img width="517" height="163" alt="image" src="https://github.com/user-attachments/assets/8b90e766-7667-4ce7-9459-4778faf80b67" />
+
 ## Contact
 
 Henry Ngan - henrynganwork@gmail.com
