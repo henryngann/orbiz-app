@@ -1,3 +1,4 @@
+"use client";
 import ImageCarousel from "@/components/ImageCarousel";
 import SlotSection from "@/components/SlotSection";
 import { Container, Stack } from "@mui/material";
