@@ -43,10 +43,10 @@ const GamesGrid = ({
         })}
       >
         <Typography variant="h5" gutterBottom>
-          Doh! Can&apos;t find any games w/ &quot;{searchQuery}&quot;!
+          Doh! Can&apos;t find any games!
         </Typography>
         <Typography variant="body2">
-          Check your spelling or try a different term.
+          Try another filter on the right, or clear your search terms.
         </Typography>
       </Box>
     );

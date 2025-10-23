@@ -8,9 +8,6 @@ export function useGames() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  //NOTE!
-  //useEffect for data fetching is actually outdated but is used here due to time constraints.
-  //TODO: switch to SWR for caching/revalidation.
   useEffect(() => {
     const fetchGames = async () => {
       try {
