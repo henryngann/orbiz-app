@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import mockData from "@/mocks/games.json";
 import { Game } from "@/types/game";
 
-export function useGames() {
+export const useGames = () => {
   const [games, setGames] = useState<Game[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -29,4 +29,4 @@ export function useGames() {
   }, []);
 
   return { games, loading, error };
-}
+};
