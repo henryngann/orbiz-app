@@ -44,7 +44,7 @@ const ImageCarousel = () => {
             sx={{
               objectFit: "cover",
               width: "100%",
-              height: "auto",
+              height: { xs: "200px", sm: "250px" },
               borderRadius: 2,
               px: 1,
             }}
