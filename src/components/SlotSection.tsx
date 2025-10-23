@@ -1,5 +1,5 @@
 "use client";
-import useDebouncedValue from "@/hooks/useDebounce";
+
 import { useIsMobile } from "@/hooks/useMediaQueries";
 import { useGames } from "@/hooks/useMockGames";
 import SearchIcon from "@mui/icons-material/Search";
@@ -15,6 +15,7 @@ import {
 import { useState } from "react";
 import CategoryBar from "./CategoryBar";
 import GamesGrid from "./GamesGrid";
+import { useDebouncedValue } from "@/hooks/useDebounce";
 
 const SlotSection = () => {
   const isMobile = useIsMobile();
