@@ -12,7 +12,7 @@ const useDebouncedValue = <T>(value: T, delay: number): T => {
     }, delay);
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timer); //clean up function
     };
   }, [value, delay]);
 

@@ -1,7 +1,7 @@
 # Henry Ngan
 
 Timebox: Referring to the Job Description, the length of the exercise should take roughly ~ 1 hour.
-Deployment - Link to Vercel Here-
+Deployment - [Vercel](https://orbiz-app-henryngan.vercel.app/) -
 
 - See Future Considerations for closing thoughts on polish and future improvements.
 
@@ -39,9 +39,9 @@ Functional
 
 Submission must have:
 
-● Source code (React + TypeScript)
-● Instructions to run locally (npm install && npm start)
-● A short README.md explaining your approach, any challenges, and optional features
+- [x] Source code (React + TypeScript)
+- [x] Instructions to run locally (npm install && npm start)
+- [x] A short README.md explaining your approach, any challenges, and optional features
 
 ## Installation
 
@@ -51,64 +51,65 @@ Submission must have:
    `npm install`
 3. Run the development server
    `npm run dev`
-4. `Open [http://localhost:3000](http://localhost:3000) with your browser.`
+4. `Open http://localhost:3000 with your browser.`
 
 5. Profit!!!
 
 ## Project Structure
 
-src/ - code root
-src/app/ - app router
-
-components/ - contains all shared UI
-hooks/ - for reusable logic
-providers/ - for top-level context (ThemeProvider)
-types/ - for all shared models/interfaces/types etc
-mocks/ - for anything mock-related
-style/ - for anything style-related
+- components/ - contains all shared UI
+- hooks/ - reusable logic
+- providers/ - top-level context (ThemeProvider)
+- types/ - all shared models/interfaces/types etc
+- mocks/ - anything mock-related
+- style/ - anything style-related
 
 ## Approach
 
-Alright! Initially, my top priorities were to review and understand the functional and technical requirements deeply. I started with jotting down the optional points as a low priority task and decided that if I had any extra time after my time box, that I would aim for those extra points. Once I had a deep understanding of the assignment, I began by organizing everything into a clean folder structure. My approach focused on functionality first and the presentation layer afterwards. This meant setting up the fake mockData call + focusing on filter/search before doing anything crazy for style. For my components, I began w/ a mobile-first design and branched off from there. MUI's Grid + Flexbox made responsive design accomplishable here.
+Alright! Initially, my top priorities were to review and understand the functional and technical requirements deeply. I started with jotting down the optional points as a low priority task and decided that if I had any extra time after my time box, that I would aim for those extra points. Once I had a deep understanding of the assignment, I began by organizing everything into a clean folder structure. My strategy was to focus on functionality first and the presentation layer afterwards. This meant setting up the fake mockData call + focusing on filter/search before doing anything crazy for style. For my components, I began w/ a mobile-first design and branched off from there. MUI's Grid + Flexbox made responsive design accomplishable here. I also strongly kept in mind to keep complexity to a minimum while also considering scale + maintainability.
 
 The Breakdown
 
 Components/
 
-SlotSection for the main layout - Contains the search that filters game by titles and category. (filtered for provider as well.)
+- SlotSection for the main layout - Contains the search that filters game by titles and category. (filtered for provider as well.)
 
-GamesGrid/GamesCard for displaying all the games in a responsive grid. Uses Grid, Container and Stack Components for basic responsive design. Also handles error cases gracefully. On a failed fetch, users are prompted to retry with an alert. On an empty search, users are prompted to redo the query. For cases with network delay, a MUI skeleton is shown in place before things are loaded in.
+- GamesGrid/GamesCard for displaying all the games in a responsive grid. Uses Grid, Container and Stack Components for basic responsive design. Also handles error cases gracefully. On a failed fetch, users are prompted to retry with an alert. On an empty search, users are prompted to redo the query. For cases with network delay, a MUI skeleton is shown in place before things are loaded in.
 
-CategoryBar for the eventual implementation of toggling favourites. (Was able to knock down this bonus point. Simple onclick filter)
-Image Carousel for funsies. (This wasn't required but the design of the website felt empty. I just ripped some images off of bet105.ag and slapped them here)
+- CategoryBar for the implementation of toggling favourites. Works hand in hand with CategoryItem to display the MUI paper items. (Was able to knock down this bonus point. Simple onclick toggle)
 
-GameCardSkeleton - Uses MUI's skeleton component to show a lightweight place holder. Very apparent with the simulated network delay. Just refresh to check it out!
+- Image Carousel for funsies. (This wasn't required but the design of the website felt empty. I just ripped some images off of bet105.ag and slapped them at the top.) Also, it is common practice to have promotions at the top! It is the highest attention zone for users and can get better click-through + conversion by adding it in that particular spot.
+
+- GameCardSkeleton - Uses MUI's skeleton component to show a lightweight place holder. Very apparent with the simulated network delay. Just refresh to check it out!
 
 Hooks/
 
-useMockGames - to simulate the API call with realistic delays. Added Math.random here to juggle 1-2 seconds.
-useMediaQueries - I wanted a hook to handle mobile breakpoints cleanly. This helped me dynamically adjust for mobile slides in the image carousel.
-useDebounce - A very very simple debounce hook that takes a generic and runs a setTimeOut before cleaning itself up. Used so that the search input could feel more seamless.
+- useMockGames - to simulate the API call with realistic delays. Added Math.random here to juggle 1-2 seconds.
+- useMediaQueries - I wanted a hook to handle mobile breakpoints cleanly. This helped me dynamically adjust for mobile slides in the image carousel.
+- useDebounce - A very very simple debounce hook that takes a generic and runs a setTimeOut before cleaning itself up. Used so that the search input could feel more seamless.
 
 Types/
-games.ts - Just contains one type but defines the Game model.
+
+- games.ts - defines the Game model.
 
 Styling/ + Providers/
-theme.ts - Went for a dark mode casino aesthetic. Visited Stake.com, pointsbet, powerpacks and csgoEmpire for design inspiration. Anything reusable style-wise for commonly used MUI components would go here otherwise, the sx prop would suffice.
-font.ts - Used Roboto Condensed to make it look more "casino-ey"
-ThemeProvider - Needed for the MUI theme.
+
+- theme.ts - Went for a dark mode casino aesthetic. Visited Stake.com, pointsbet, powerpacks and CSGOEmpire for design inspiration.
+- font.ts - Used Roboto Condensed to make it look more "casino-ey"
+
+- ThemeProvider - Wraps our app w/ our MUI theme.
 
 ## Future Considerations
 
-useMockGames - useEffect for data fetching is actually outdated but is used here due to time constraints. In the future, we should switch to SWR for better caching and revalidation.
+- useMockGames - useEffect for data fetching is actually outdated but is used here due to time constraints. In the future, we should switch to SWR for better caching and revalidation.
 
-Images - Due to time constraints, converting these images to a better format was not feasible. Using these PNG's could potentially affect performance negatively and in the future, we should look to use other superior formats like AVIF, WEBP, etc.
+- Images - Due to time constraints, converting these images to a better format was not feasible. Using these PNG's could potentially affect performance negatively and in the future, we should look to use other superior formats like AVIF, WEBP, etc.
 
-CategoryBar - I would have loved to add more categories here but due to time constraints, kept it to the relevant ones only.
+- CategoryBar - I would have loved to add more categories here but due to time constraints, kept it to the relevant ones only.
 
-ImageCarousel - Building a carousel from scratch costs more time. Again, due to time constraints, using react-slick to accomplish this was a safe decision for filling up the empty page. In the future, using pure CSS scroll-snap + MUI can be better for performance, minimal fuss, etc.
+- ImageCarousel - Building a carousel from scratch costs more time. Again, due to time constraints, using react-slick to accomplish this was a safe decision for filling up the empty page. In the future, using pure CSS scroll-snap + MUI can be better for performance, minimal fuss, a11y, etc.
 
-GamesGrid - When searching for a game with the input, results appear and dissapear instantly. This can feel too snappy for some users so in the future, I'd add small, subtle animations to fade in new and fade out removed ones. Pairing this with a debounce works wonderfully.
+- GamesGrid - When searching for a game with the input, results appear and dissapear instantly. This can feel "flickery" for some users so in the future, I'd add small, subtle animations to fade in new and fade out removed ones. Pairing this with a debounce works wonderfully.
 
 ## Final Thoughts
 

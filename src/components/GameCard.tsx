@@ -11,9 +11,8 @@ const GameCard = ({ game }: { game: Game }) => {
   return (
     <>
       <Card
-        component={"article"}
+        component="article"
         sx={{
-          maxWidth: 225,
           transition: "transform 200ms ease",
           "&:hover": {
             transform: "translateY(-8px)",
