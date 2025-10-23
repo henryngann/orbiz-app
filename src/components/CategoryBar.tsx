@@ -13,7 +13,7 @@ const boxStyle = (theme: Theme) => ({
   py: { xs: 1, sm: 1.5 },
   px: 2,
   minWidth: { xs: 96, sm: 110 },
-  transition: "transform 200ms ease",
+  transition: "transform 200ms ease, background-color 300ms ease",
 });
 
 const CategoryBar = ({
@@ -41,7 +41,6 @@ const CategoryBar = ({
             bgcolor: activeFavourite
               ? theme.palette.primary.main
               : theme.palette.background.paper,
-            transition: "background-color 0.3s",
           })}
         >
           <Icon component={LocalFireDepartmentIcon} />
@@ -67,7 +66,6 @@ const CategoryBar = ({
             bgcolor: activeParlay
               ? theme.palette.primary.main
               : theme.palette.background.paper,
-            transition: "background-color 0.3s",
           })}
         >
           <Icon component={CasinoIcon} />
