@@ -9,12 +9,10 @@ const GamesGrid = ({
   games,
   loading,
   error,
-  searchQuery,
 }: {
   games: Game[];
   loading: boolean;
   error: string | null;
-  searchQuery: string;
 }) => {
   //If loading is true, build a placeholder array
   //otherwise, use our mock data

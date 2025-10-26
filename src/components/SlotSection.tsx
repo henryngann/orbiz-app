@@ -94,12 +94,7 @@ const SlotSection = () => {
             Showing {filteredData.length} Results
           </Typography>
         </Box>
-        <GamesGrid
-          games={filteredData}
-          loading={loading}
-          error={error}
-          searchQuery={searchQuery}
-        />
+        <GamesGrid games={filteredData} loading={loading} error={error} />
       </Stack>
     </Container>
   );
