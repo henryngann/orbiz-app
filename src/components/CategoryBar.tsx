@@ -7,15 +7,15 @@ import CategoryItem from "./CategoryItem";
 const CategoryBar = ({
   activeFavourite,
   onToggleFavourite,
-  activeBoosted,
-  onToggleBoosted,
+  activeSlots,
+  onToggleSlots,
   activeJackpots,
   onToggleJackpots,
 }: {
   activeFavourite: boolean;
   onToggleFavourite: () => void;
-  activeBoosted: boolean;
-  onToggleBoosted: () => void;
+  activeSlots: boolean;
+  onToggleSlots: () => void;
   activeJackpots: boolean;
   onToggleJackpots: () => void;
 }) => {
@@ -32,8 +32,8 @@ const CategoryBar = ({
         <CategoryItem
           icon={RocketLaunchIcon}
           label="SLOTS"
-          isActive={activeBoosted}
-          onClick={onToggleBoosted}
+          isActive={activeSlots}
+          onClick={onToggleSlots}
         />
 
         <CategoryItem

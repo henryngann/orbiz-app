@@ -25,7 +25,7 @@ const SlotSection = () => {
   const debouncedQuery = useDebouncedValue(searchQuery, 300);
 
   const [showFavourites, setShowFavourites] = useState(false);
-  const [showBoosted, setShowBoosted] = useState(false);
+  const [showSlots, setShowSlots] = useState(false);
   const [showJackpots, setShowJackpots] = useState(false);
 
   const filteredData = games.filter((row) => {
@@ -37,10 +37,10 @@ const SlotSection = () => {
       row.provider.toLowerCase().includes(query);
 
     const matchesFav = !showFavourites ? true : row.category === "Table Games";
-    const matchesBoosted = !showBoosted ? true : row.category === "Slots";
+    const matchesSlots = !showSlots ? true : row.category === "Slots";
     const matchesJackpots = !showJackpots ? true : row.category === "Jackpots";
 
-    return matchesSearch && matchesFav && matchesBoosted && matchesJackpots;
+    return matchesSearch && matchesFav && matchesSlots && matchesJackpots;
   });
 
   return (
@@ -77,8 +77,8 @@ const SlotSection = () => {
           <CategoryBar
             activeFavourite={showFavourites}
             onToggleFavourite={() => setShowFavourites((v) => !v)}
-            activeBoosted={showBoosted}
-            onToggleBoosted={() => setShowBoosted((v) => !v)}
+            activeSlots={showSlots}
+            onToggleSlots={() => setShowSlots((v) => !v)}
             activeJackpots={showJackpots}
             onToggleJackpots={() => setShowJackpots((v) => !v)}
           />
