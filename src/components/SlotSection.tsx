@@ -26,7 +26,7 @@ const SlotSection = () => {
 
   const [showFavourites, setShowFavourites] = useState(false);
   const [showBoosted, setShowBoosted] = useState(false);
-  const [showParlay, setShowParlay] = useState(false);
+  const [showJackpots, setShowJackpots] = useState(false);
 
   const filteredData = games.filter((row) => {
     const query = debouncedQuery.toLowerCase();
@@ -38,9 +38,9 @@ const SlotSection = () => {
 
     const matchesFav = !showFavourites ? true : row.category === "Table Games";
     const matchesBoosted = !showBoosted ? true : row.category === "Slots";
-    const matchesParlay = !showParlay ? true : row.category === "Jackpots";
+    const matchesJackpots = !showJackpots ? true : row.category === "Jackpots";
 
-    return matchesSearch && matchesFav && matchesBoosted && matchesParlay;
+    return matchesSearch && matchesFav && matchesBoosted && matchesJackpots;
   });
 
   return (
@@ -79,8 +79,8 @@ const SlotSection = () => {
             onToggleFavourite={() => setShowFavourites((v) => !v)}
             activeBoosted={showBoosted}
             onToggleBoosted={() => setShowBoosted((v) => !v)}
-            activeParlay={showParlay}
-            onToggleParlay={() => setShowParlay((v) => !v)}
+            activeJackpots={showJackpots}
+            onToggleJackpots={() => setShowJackpots((v) => !v)}
           />
         </Stack>
         <Box>

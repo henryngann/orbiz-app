@@ -9,15 +9,15 @@ const CategoryBar = ({
   onToggleFavourite,
   activeBoosted,
   onToggleBoosted,
-  activeParlay,
-  onToggleParlay,
+  activeJackpots,
+  onToggleJackpots,
 }: {
   activeFavourite: boolean;
   onToggleFavourite: () => void;
   activeBoosted: boolean;
   onToggleBoosted: () => void;
-  activeParlay: boolean;
-  onToggleParlay: () => void;
+  activeJackpots: boolean;
+  onToggleJackpots: () => void;
 }) => {
   return (
     <Box>
@@ -39,8 +39,8 @@ const CategoryBar = ({
         <CategoryItem
           icon={CasinoIcon}
           label="JACKPOTS"
-          isActive={activeParlay}
-          onClick={onToggleParlay}
+          isActive={activeJackpots}
+          onClick={onToggleJackpots}
         />
       </Stack>
     </Box>

@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Box from "@mui/material/Box";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
